@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <!--<link rel="stylesheet" href="l.css">-->
+    <style>body {
+    
+        font-family: Arial, sans-serif;
+        background-image:url("https://www.nikaiacours.fr/wp-content/uploads/2019/12/login-background.jpg");
+        height:80vh;
+        background-size: cover;
+    }
+    
+    .l{
+        width: 300px;
+        margin: 100px auto;
+        background-color:black;
+        opacity: 0.3;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        text-align: center;
+        color:rgb(9, 240, 163);
+        font-weight: 800;
+        opacity: 0.9;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 7vh;
+        margin-bottom: 8vh;
+        border-radius: 10px;
+        
+    }
+    
+    .p{
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 3px solid #ccc;
+        border-radius: 6px;
+        background-color: rgb(255, 255, 255);
+        font-weight: 800;
+        color: #060404;
+        
+    }
+    
+    button {
+        padding: 10px;
+        background-color: #4CAF50;
+        font-weight: 800;
+        color: #060404;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #05e410;
+    }
+    p{
+        color:#fff;
+        text-align: center;
+    }
+    .q{
+        text-decoration: none;
+        color:#060404;
+        font-weight: 800;
+    }
+    .a{
+        margin-top: 20px;
+    }</style>
+</head>
+<body>
+    <div class="l">
+        <h2>Sign up</h2><hr>
+        <form action="/signupsubmit" method="GET">
+            <input class="p" type="text" placeholder="Username" name="username" required>
+            <input class="p c" type="email" placeholder="Email" name="email" required>
+            <input class="p c" type="tel" placeholder="Phone" name="phone" required>
+            <input class="p c" type="password" placeholder="Password" name="password" required>
+            <button type="submit" class="q">Sign up</button>
+        </form>
+    </div>
+</body>
+</html>

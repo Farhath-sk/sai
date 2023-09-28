@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        <!-- @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap');-->
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+    background-color: rgba(195, 195, 195, 0.274);
+}
+.header{
+    background: radial-gradient(white,rgb(12, 143, 237));
+}
+.nav-bars{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    width:100%;
+    position: fixed;
+    z-index: 100;
+    background-color:#2a6041a1;
+ 
+}
+.logo{
+    padding: 10px;
+}
+
+.menu-bar{
+    flex:1;
+    text-align: right;
+}
+.menu-bar ul{
+    display: inline-block;
+    list-style-type: none;
+}
+.menu-bar ul li{
+    display: inline-block;
+    margin: 15px;
+    position: relative;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    padding: 9px;
+    transition: all 0.3s;
+}
+.menu-bar .drop-down{
+    display: none;
+}
+.menu-bar ul li:hover .drop-down{
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+     
+}
+.menu-bar ul li:hover .drop-down ul {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color:#FFC0C7;
+    border-radius:0 0 7px 7px;
+
+}
+.menu-bar ul li:hover .drop-down ul li{
+    width: 50px;
+    margin-bottom: 2px;
+    font-size: 13px;
+}
+.header ul li:hover .drop-down ul li a{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2.5px;
+    width: 100px;
+    margin-right:70px;
+    margin-left: -2px;
+    background-color:#DFFFD8;
+    color: black;
+}
+.header ul li:hover .last a{
+    margin-bottom: 14px;
+}
+.menu-bar .home{
+    background-color: #73778d;
+    
+}
+.menu-bar .product{
+    background-color: #FFC0C7;
+}
+.menu-bar .account{
+    background-color: #FFF4A3;
+}
+.menu-bar .contact{
+    background-color:#D9EEE1;
+    
+}
+#cart{
+    font-size: 25px;
+
+}
+#cart i{
+    margin-bottom: -50px;
+}
+.menu-bar ul li a ,.home:hover{
+    background-color:#616161;
+}
+.menu-bar ul li a ,.product:hover{
+    background-color:#f596a1;
+}
+.menu-bar ul li a ,.account:hover{
+    background-color:#f6e776;
+}
+.menu-bar ul li a ,.contact:hover{
+    background-color:#b2e6c6;
+}
+
+.container{
+    width: 100%;
+    margin: auto;    
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;   
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 30px;
+    
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+    
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0 0 0;
+    height: 700px;
+    width: 800px;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px;
+}
+.col-2 p{
+    margin: 25px;
+}
+.btn{
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    background-color: #04AA6D;
+    color: black;
+    padding: 8px 30px;
+    margin: 30px;
+    border-radius: 20px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background-color: rgb(40, 196, 40);
+}
+.about{
+    text-align: center; 
+    margin-top: 70px; 
+    margin-bottom: 10px;
+    position:relative;
+    line-height: 60px;
+    color: chocolate;
+}
+.about::after{
+    content: '';
+    background: #282A35;
+    width: 80px;
+    height: 6px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+.aboutus{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding-top: 30px;
+}
+.para{
+    max-width: 500px;
+    height: 100px;
+}
+.category{
+    margin:70px 0;
+}
+.mens{
+    text-align: center; 
+    margin-top: 200px; 
+    margin-bottom:100px;
+    position: relative;
+    line-height: 60px;
+    color: chocolate;
+}
+.mens::after{
+    content: '';
+    width: 120px;
+    height: 6px;
+    background: #282A35;
+    border-radius: 5px;
+    position: absolute;
+    transform: translate(-50%);
+    bottom: 0;
+    left: 50%;
+}
+.women{
+    text-align: center; 
+    margin-top: 200px; 
+    margin-bottom:100px;
+    position: relative;
+    line-height: 60px;
+    color: chocolate;
+}
+.women::after{
+    content: '';
+    width: 140px;
+    height: 6px;
+    background: #282A35;
+    border-radius: 5px;
+    position: absolute;
+    transform: translate(-50%);
+    bottom: 0;
+    left: 50%;
+}
+.foot{
+    text-align: center; 
+    margin-top: 200px; 
+    margin-bottom:100px;
+    position: relative;
+    line-height: 60px;
+    color: chocolate;
+}
+.foot::after{
+    content: '';
+    width: 100px;
+    height: 6px;
+    background: #282A35;
+    border-radius: 5px;
+    position: absolute;
+    transform: translate(-50%);
+    bottom: 0;
+    left: 50%;
+}
+.accessories{
+    text-align: center; 
+    margin-top: 200px; 
+    margin-bottom:100px;
+    position: relative;
+    line-height: 60px;
+    color: chocolate;
+}
+.accessories::after{
+    content: '';
+    width: 100px;
+    height: 6px;
+    background: #282A35;
+    border-radius: 5px;
+    position: absolute;
+    transform: translate(-50%);
+    bottom: 0;
+    left: 50%;
+}
+.box-1{
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 15px rgb(0,0,0.1);
+    transition: transform 0.5s;
+}
+.box-1:hover{
+    transform: translateY(7px);
+    z-index: 0;
+}
+.box-1 i{
+    color: #32715a;
+}
+.col-1{
+    min-width: 100px;
+    padding: 10px;
+    
+}
+.col-1 img{
+    height: 250px;
+    width: 270px;
+    border-radius: 10px;
+    
+}
+.offer{
+    background:radial-gradient(white,rgb(117, 128, 209));
+    margin: 5px;
+    padding: 30px 0;
+}
+.deal{
+    text-align: center;
+    color:#3C6255;
+    position: relative;
+    line-height: 60px;
+}
+.deal::after{
+    content: '';
+    width: 140px;
+    height: 4px;
+    background: #282A35;
+    border-radius: 5px;
+    position: absolute;
+    transform: translate(-50%);
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 1px;
+}
+.col-3 img{
+    height: 300px;
+    padding-left: 200px;
+}
+.col-4 p{
+    font-size: 15px;
+    float: right;
+    margin-top: -260px;
+    padding-right: 660px;
+    font-weight: 500;
+}
+.col-4 h1{
+    float: right;
+    margin-top: -230px;
+    padding-right: 245px;
+    font-size: 40px;
+}
+.col-4 small{
+    font-size: 12px;
+    float: right;
+    margin-top: -170px;
+    padding-right: 183px;
+}
+#btn1{
+    float: right;
+    margin-top: -100px;
+    margin-right:700px;
+}
+.box-1 button{
+    padding: 6px 8px;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+.row-2{
+    background-color: rgba(195, 195, 195, 0.274);
+    padding: 7px;
+}
+.review{
+    margin: 40px;
+    padding: 20px;
+    box-shadow: 0 0 15px 0px rgb(0,0,0.1);
+}
+.review-col-1 h3{
+    text-align: center;
+    margin: 15px;
+}
+.review-col-1 h1{
+    text-align: center;
+    background-color: #282A35;
+    color: beige;
+    width: 230px;
+    padding:4px 2px 4px 2px;
+    margin-bottom: 20px;
+    margin-left: 42%;
+}
+.review-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.review-box{
+    width: 500px;
+    box-shadow: 2px 2px 15px rgb(0,0,0.1);
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.profile-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px;
+}
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.username{
+    display: flex;
+    flex-direction: column;
+}
+.username strong{
+    color: #3d3d3d;
+    font-size: 1.1rem;
+}
+.username span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+.review-1{
+    color: #f9d71c;
+}
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.comment p{
+    font-size: 0.8rem;
+    color: #4b4b4b;
+}
+.review-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+    z-index: 0;
+}
+
+.row-1{
+    background:rgba(246, 246, 191, 0.818);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;   
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+.footer-col-1{
+    max-width:30%;
+    text-align: center;
+}
+.footer-col-1 h3{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.footer-col-1 p{
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+.app{
+    margin-bottom: 13px;
+    width: 150px;
+    height:50px ;
+    border-radius: 5px;
+}
+.footer-col-2{
+    text-align: center;
+    max-width: 30%;
+}
+.footer-col-2 img{
+    width: 70px;
+    border-radius: 50%;
+    padding-bottom: 10px;
+}
+.footer-col-3 img{
+    width:18px;
+    border-radius: 50%;
+}
+.footer-col-3 ul{
+    font-size:20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.footer-col-3 li{
+    padding-top: 5px;
+    list-style-type: none;
+}
+.footer-col-3 a{
+    text-decoration: none;
+    color: black;
+}
+.copy{
+    background:rgba(246, 246, 191, 0.818);
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.footer hr{
+    border: none    
+}
+.footer p{
+    text-align: center;
+    padding: 10px;
+}
+    </style>
+   <!-- <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="nav-bars">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="" width="60px" style="border-radius: 50%;">
+            </div>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="#" class="home">HOME</a></li>
+                    <li><a href="#" class="product">CATEGORIES <i class="fas fa-caret-down"></i></a>
+                        <div class="drop-down">
+                            <ul>
+                                <li><a href="#mens-wear">MENS WEAR</a></li>
+                                <li><a href="#womens-wear">WOMENS WEAR</a></li>
+                                <li><a href="#foot-wear">FOOT WEAR</a></li>
+                                <li><a href="#accessories">ACCESSORIES</a></li>
+                                <li class="last"><a href="#reviews">REVIEWS</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="account">ACCOUNT</a></li>
+                    <li><a href="#" class="contact">SIGN IN</a></li>
+                    <li id="cart"><i class="ri-shopping-cart-2-fill"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>FIND THE BEST <BR> THAT SUITS YOU!</h1>
+                <P class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Inventore impedit saepe officia praesentium nemo molestias. Fuga quo quibusdam modi tempora.</P>
+                <a href="#" class="btn">EXPLORE NOW</a>
+            </div>
+            <div class="col-2">
+                <img src="https://cdn.glitch.global/735d192a-6989-44ac-821a-4d4b9b6248cd/bgimage.png?v=1695910062509" alt="">
+            </div>
+        </div>
+    </div></div>
+    <h2 class="about">ABOUT US</h2>
+    <div class="aboutus">
+        <div>
+            <img src="https://cdn.glitch.global/735d192a-6989-44ac-821a-4d4b9b6248cd/about.png?v=1695909747637" alt="" height="270px" width="300px">
+        </div>
+        <div class="para">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, culpa tempora, incidunt ipsa modi facilis repudiandae cumque accusamus magnam excepturi mollitia eligendi. Perferendis dolorum facere nobis, veniam animi, id modi est odio officiis itaque vero, illo eligendi perspiciatis atque quaerat voluptate. Quaerat nam natus earum sunt quisquam illum quas blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla in vero perferendis odio iusto nam non dicta! Commodi, necessitatibus tempore?</p>
+        </div>
+    </div>
+
+<!----------MENS WEAR-------------->
+
+
+    <div class="category">
+        <h1 class="mens" id="mens-wear">MEN'S WEAR</h1>
+        <div class="row">
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="https://cdn.glitch.global/735d192a-6989-44ac-821a-4d4b9b6248cd/gallery-1.jpg?v=1695910597967" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">PUMA</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1250</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/product-3.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">BENETTON</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1050</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/mens jeans-1.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">HIGHLANDER</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1150</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/mens wear.webp" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">TOMMY HILFIGER</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1150</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/mens wear-1.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">PAN AMERICA</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1150</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/mens jeans.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">LEE COOPER</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1150</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-------------WOMENS WEAR-------------->
+
+
+    <div class="category">
+        <h1 class="women" id="womens-wear">WOMEN'S WEAR</h1>
+        <div class="row">
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/womens wear.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">BLACK TOP</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1250</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/womens wear-1.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">PARTY WEAR</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 2350</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/womens wear-2.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">WEDDING WEAR</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 2530</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/womens wear-3.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">WOMEN'S CASUAL</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1050</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/womens wear-4.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">WEDDING WEAR</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 2050</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="https://cdn.glitch.global/735d192a-6989-44ac-821a-4d4b9b6248cd/category-3.jpg?v=1695910380647" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">ADIDAS T-SHIRT</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1250</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-----------------DEAL OF THE DAY------------------------->
+
+
+    <div class="offer">
+        <div class="row-2">
+            <h1 class="deal">DEAL OF THE DAY</h1>
+            <div class="box-2">
+                <div class="col-3">
+                    <img src="images/deal1.png">
+                </div>
+                <div class="col-4">
+                    <p>EXCLUSIVELY AVAILABLE</p>
+                    <h1>FOSSILE NATE CHRONOGRAPH</h1>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt similique accusamus cupiditate id, blanditiis dignissimos <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, aut. </small>
+                    <a href="" class="btn" id="btn1">BUY NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!--------------------FOOT WEAR-------------->
+
+
+    <div class="category">
+        <h1 class="foot" id="foot-wear">FOOT WEAR</h1>
+        <div class="row">
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/foot wear-2.webp" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">USPA</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 2550</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/product-10.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">PUMA</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1250</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/foot wear.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">WOOD LAND</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1850</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/foot wear-3.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">WOMEN'S CASUAL</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1050</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/foot wear-4.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">ASIAN</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1350</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+            <div class="box-1">
+                <div class="col-1">
+                    <img src="images/foot wear-5.jpg" alt="">
+                </div>
+                <h3 style="margin-bottom: 10px; margin-top: -10px;">DLORDS</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <p>&#8377; 1450</p>
+                <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+
+<!--ACCESSORIES-->
+
+
+<div class="category">
+    <h1 class="accessories" id="accessories">ACCESSORIES</h1>
+    <div class="row">
+        <div class="box-1">
+            <div class="col-1">
+                <img src="images/exclusive.png" alt="">
+            </div>
+            <h3 style="margin-bottom: 10px; margin-top: -10px;">RED MI</h3>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <p>&#8377; 1200</p>
+            <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+            <button>Add To Cart</button>
+        </div>
+        <div class="box-1">
+            <div class="col-1">
+                <img src="images/product-8.jpg" alt="">
+            </div>
+            <h3 style="margin-bottom: 10px; margin-top: -10px;">FOSSIL</h3>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <p>&#8377; 2050</p>
+            <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+            <button>Add To Cart</button>
+        </div>
+        <div class="box-1">
+            <div class="col-1">
+                <img src="images/product-9.jpg" alt="">
+            </div>
+            <h3 style="margin-bottom: 10px; margin-top: -10px;">ROADSTER</h3>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <p>&#8377; 1850</p>
+            <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+            <button>Add To Cart</button>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="box-1">
+            <div class="col-1">
+                <img src="images/watch.jpg" alt="">
+            </div>
+            <h3 style="margin-bottom: 10px; margin-top: -10px;">GENEVA</h3>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <p>&#8377; 799</p>
+            <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+            <button>Add To Cart</button>
+        </div>
+        <div class="box-1">
+            <div class="col-1">
+                <img src="images/watch-1.jpg" alt="">
+            </div>
+            <h3 style="margin-bottom: 10px; margin-top: -10px;">QUARTZ</h3>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <p>&#8377; 899</p>
+            <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+            <button>Add To Cart</button>
+        </div>
+        <div class="box-1">
+            <div class="col-1">
+                <img src="images/watch-2.jpg" alt="">
+            </div>
+            <h3 style="margin-bottom: 10px; margin-top: -10px;">LVPAI</h3>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <p>&#8377; 599</p>
+            <button style="margin-bottom: 10px; margin-top: 10px; margin-right: 6px;">Buy Now</button>
+            <button>Add To Cart</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-----------------review---------------->
+
+
+<section class="review" id="reviews">
+    <div class="review-col-1">
+        <h3>REVIEWS</h3>
+        <h1>CLIENT SAYS</h1>
+    </div>
+    <div class="review-box-container">
+        <div class="review-box">
+            <div class="box-top">
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="https://cdn.glitch.global/735d192a-6989-44ac-821a-4d4b9b6248cd/bussiness-man.png?v=1695910111589" alt="">
+                    </div>
+                    <div class="username">
+                        <strong>JUBAIR</strong>
+                        <span>@jubairahmed_3000</span>
+                    </div>
+                </div>
+                <div class="review-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, totam eum delectus consectetur voluptatibus, explicabo alias magni tenetur quaerat error magnam molestiae aliquid nostrum nobis aperiam. Ratione enim atque fugit!</p>
+            </div>
+        </div>
+
+
+        <div class="review-box">
+            <div class="box-top">
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="images/man.png" alt="">
+                    </div>
+                    <div class="username">
+                        <strong>NEHRA</strong>
+                        <span>@nehrasais_6136</span>
+                    </div>
+                </div>
+                <div class="review-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, totam eum delectus consectetur voluptatibus, explicabo alias magni tenetur quaerat error magnam molestiae aliquid nostrum nobis aperiam. Ratione enim atque fugit!</p>
+            </div>
+        </div>
+
+
+        <div class="review-box">
+            <div class="box-top">
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="images/woman.png" alt="">
+                    </div>
+                    <div class="username">
+                        <strong>HARSHINI</strong>
+                        <span>@harshini_harshi_1314</span>
+                    </div>
+                </div>
+                <div class="review-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, totam eum delectus consectetur voluptatibus, explicabo alias magni tenetur quaerat error magnam molestiae aliquid nostrum nobis aperiam. Ratione enim atque fugit!</p>
+            </div>
+        </div>
+
+
+
+        <div class="review-box">
+            <div class="box-top">
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="images/girl.png" alt="">
+                    </div>
+                    <div class="username">
+                        <strong>GAYATHRI</strong>
+                        <span>@gaye3296</span>
+                    </div>
+                </div>
+                <div class="review-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, totam eum delectus consectetur voluptatibus, explicabo alias magni tenetur quaerat error magnam molestiae aliquid nostrum nobis aperiam. Ratione enim atque fugit!</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+
+<!-----------footer------------>
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row-1">
+            <div class="footer-col-1">
+                <h3>Download our app</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="https://play.google.com" target="
+                "><img src="images/download.png" alt="" class="app"></a>
+                <a href="https://apps.apple.com" target="
+                "><img src="https://cdn.glitch.global/735d192a-6989-44ac-821a-4d4b9b6248cd/appstore.png?v=1695909966014" alt="" class="app"></a> 
+            </div>
+
+            <div class="footer-col-2">
+                <img src="images/logo.jpg" alt="">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aperiam?</p>
+            </div>
+            <div class="footer-col-3">
+                <ul>Useful links</ul>
+                <li><a href="https://facebook.com" target="_
+                "><img src="images/fb.webp" alt=""> Facebook</a></li>
+                <li><a href="https://instagram.com" target="_
+                "><img src="images/insta.webp" alt=""> Instagram</a></li>
+                <li><a href="https://twitter.com" target="_
+                "><img src="images/twitter.png" alt=""> Twitter</a></li>
+                <li><a href="https://youtube.com" target="_
+                "><img src="images/yt.jpg" alt=""> Youtube</a></li>
+            </div>
+            
+        </div>
+        <div class="copy">
+            <hr>
+            <p class="copyright">Copyright 2023 - we5</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
